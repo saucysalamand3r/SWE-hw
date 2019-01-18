@@ -1,0 +1,17 @@
+body {
+    background: black;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    background: slategray;
+    color:white;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    max-width: fit-content;
+}
