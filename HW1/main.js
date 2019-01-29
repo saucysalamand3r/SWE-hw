@@ -1,18 +1,19 @@
-var input = prompt("Please enter a list of grades, as an integer out of 100. Separate entries with spaces. Any invalid entries will be automatically removed.");
+var input = prompt("Please enter a series of integers, separted by spaces. Any non-integers will be automatically removed.");
 var inputDisplay = document.getElementById('input');
-var displayAvg = document.getElementById('displayAvg');
+var displayMax = document.getElementById('displayMax');
+var displayMin = document.getElementById('displayMin');
+var max, min;
 var inputSplit = input.split(' ');
 var inputNumbers = inputSplit.map(Number);
+inputNumbers.sort(sortNumber);
 inputNumbers = inputNumbers.filter(Number);
+console.log(inputNumbers);
 
-function average(inputNumbers){
-	var sum = 0;
-	for(i = 0; i < inputNumbers.length; i++){
-		sum += inputNumbers[i];
-	}
-	return sum / inputNumbers.length;
+function sortNumber(a,b){
+    return a - b;
 }
 
-// Display unsorted values, then average
+// Display unsorted values, then max/min
 inputDisplay.innerHTML = input;
-displayAvg.innerHTML = average(inputNumbers);
+displayMax.innerHTML = inputNumbers[inputNumbers.length - 1];
+displayMin.innerHTML = inputNumbers[0];

@@ -1,5 +1,5 @@
 body {
-    background: eggshell;
+    background: black;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -7,8 +7,8 @@ body {
 }
 
 .card {
-    background: dodgerblue;
-    color: white;
+    background: slategray;
+    color:white;
     display: inline-block;
     padding: 1em;
     margin: 1em;
